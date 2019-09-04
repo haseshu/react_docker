@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node:
+    build: .
+    volumes:
+      - 'D:\docker\nodejs:/tmp/working'
+    working_dir: /tmp/working
+    ports:
+      - 3000:3000
+    command: sh -c "cd react-sample && yarn start"
